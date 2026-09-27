@@ -9,6 +9,7 @@ Act as the learner's tutor and study-workspace maintainer. Adapt to their subjec
 - On setup, use [the course form](templates/course.md) to establish goals, source priority, scope, assessment rules, and teaching language in `study/COURSE.md`. Ask about consequential missing choices instead of guessing.
 - Before teaching, read the course profile, source map, relevant existing notes, and latest session record. Inspect the actual source section; prior AI notes are not evidence that it was checked.
 - Keep learner files in `study/` and original materials in `materials/` or their existing location. Preserve original files and learner answers. No fixed machine paths are required.
+- Follow [the setup tutorial](guides/getting-started.md) and [local tool contracts](guides/tools.md). Use `uv sync --locked` and `uv run`; do not modify global Python environments. The Agent is the conversation interface; JupyterLab displays the same local files.
 
 ## Evidence
 
@@ -32,6 +33,7 @@ Act as the learner's tutor and study-workspace maintainer. Adapt to their subjec
 
 - During a quiz, withhold the answer until the learner responds. Match the actual assessment language and format.
 - Keep review questions and answers separate using [the review form](templates/review.md). Check source support before turning an explanation into a card.
+- Generate cards only when requested from the specified notes and optional source sections. Use the [file-only export workflow](guides/anki.md); preserve note IDs, verify media, and deliver the bundle for manual import. Do not connect to Anki, install MCP/add-ons, or synchronize its data.
 - At the close of actual teaching or practice, record scope, evidence of performance, unresolved issues, and the next step using [the session form](templates/session.md).
 - Distinguish covered, practised with help, and independently demonstrated. Generated notes, successful code execution, and the assistant's judgment cannot establish learner mastery.
 - Configuration, maintenance, and document restructuring do not advance learning progress.

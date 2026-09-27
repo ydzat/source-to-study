@@ -16,7 +16,7 @@ Keeping the development scaffold as the main entry was rejected because it addre
 
 ## Consequences
 
-A learner can begin with a file-capable assistant without waiting for a pipeline. The template does not automate source extraction, Notebook generation, or Anki export. Its example demonstrates note structure, not a complete course or tested learning efficacy.
+A learner can begin with a file-capable assistant and the forms, or use the local tools described in the [tool reference](../../../guides/tools.md). The small example demonstrates note structure, not a complete course or tested learning efficacy.
 
 ## Verification
 

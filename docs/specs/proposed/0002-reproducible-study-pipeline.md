@@ -10,7 +10,7 @@ Manual AI-assisted study can produce broken asset paths, unsupported citations, 
 
 Build a minimal pipeline around a rights-cleared original mini-course: source indexing, editable lesson inputs, validated Notebook output, review-card validation, and optional Anki export. Preserve learner responses across rebuilds. Keep reusable logic independent of course, machine paths, model provider, and optional UI.
 
-Define concrete formats and commands in a follow-up design before implementation; no command in this proposal is available to learners.
+The [local tool reference](../../../guides/tools.md) owns available commands and formats. This proposal remains open for the complete original course and clean-workspace acceptance; existing tools do not establish that the educational example has shipped. Anki integration is file-only, not direct application control.
 
 ## Alternatives considered
 
