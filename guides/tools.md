@@ -6,6 +6,8 @@ This reference is for the agent operating your files. Learners can follow the co
 
 ## Environment and initialization
 
+For Agent-led Windows deployment, load [sts-setup](../.agents/skills/sts-setup/SKILL.md). With uv available, `./scripts/setup.ps1` runs locked sync, initialization, and `uv run --locked python scripts/check_setup.py`. It accepts `-UvPath` for a verified executable outside PATH. It returns nonzero on failure and records stage/status/time in ignored `work/setup/report.json`; a shell-level refusal may prevent any report update. The health check runs a fresh kernel with a plot, checks tool imports and workspace paths, and starts/stops an authenticated loopback JupyterLab server. Its local artifacts/logs stay under `work/setup/` and must not be published. Reruns preserve learner files; no server stays running after a successful check.
+
 `pyproject.toml` owns direct dependencies; `uv.lock` locks resolved versions; `.python-version` selects Python 3.12. Run `uv sync --locked`, then:
 
 ```sh

@@ -8,6 +8,7 @@ Skills package the tasks your Agent repeats. You describe the learning goal; the
 
 | Your request | Workflow |
 |---|---|
+| “Install and verify this project.” | `sts-setup`: uv, isolated environment, workspace, real kernel/server checks, restart handoff |
 | “Prepare this lecture and propose a Notebook framework.” | `sts-course-setup`: course profile, source inspection, unit division, framework checks |
 | “Continue K03” or “Revise this explanation in my notes.” | `sts-study-session`: recover context, teach the requested unit, update and verify notes |
 | “Quiz me” or “Finish today's study and record the next step.” | `sts-study-session`: actual practice and evidence-based session records |

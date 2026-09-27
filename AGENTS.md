@@ -10,6 +10,7 @@ Load only the skill matching the current task, using native skill loading when a
 
 | Task | Skill |
 |---|---|
+| Install, verify, or repair the Windows project environment | [sts-setup](.agents/skills/sts-setup/SKILL.md) |
 | Initialize a course, prepare a source, or build a lecture framework | [sts-course-setup](.agents/skills/sts-course-setup/SKILL.md) |
 | Teach/revise a unit, quiz, resume, or close actual study | [sts-study-session](.agents/skills/sts-study-session/SKILL.md) |
 | Generate/revise requested cards or export an import bundle | [sts-export-cards](.agents/skills/sts-export-cards/SKILL.md) |

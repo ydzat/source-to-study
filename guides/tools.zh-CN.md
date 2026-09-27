@@ -6,6 +6,8 @@
 
 ## 环境与初始化
 
+Agent 部署 Windows 环境时加载 [sts-setup](../.agents/skills/sts-setup/SKILL.md)。已有 uv 时，`./scripts/setup.ps1` 依次执行锁定同步、初始化与 `uv run --locked python scripts/check_setup.py`。可用 `-UvPath` 指定经过验证但不在 PATH 中的可执行文件。失败返回非零，阶段、状态与时间写入忽略目录下的 `work/setup/report.json`；如果被 Shell 直接拒绝执行，则报告可能无法更新。健康检查实际运行新内核与绘图，检查工具导入和目录，启动并关闭带认证的本地 JupyterLab 服务。产物和日志保留在 `work/setup/`，不得发布。重跑保留学习文件；检查成功后不会留下运行中的服务。
+
 `pyproject.toml` 记录直接依赖，`uv.lock` 锁定解析版本，`.python-version` 选择 Python 3.12。先运行 `uv sync --locked`，然后：
 
 ```sh

@@ -6,11 +6,23 @@
 
 ## 安装与启动
 
-下载并解压本仓库，安装 [uv](https://docs.astral.sh/uv/getting-started/installation/)，然后在包含 `pyproject.toml` 的目录打开终端，运行：
+在 Windows 上下载并解压本仓库。用已安装、已登录且能操作文件的 AI Agent（例如 Codex 或 OpenCode）打开解压后的目录，然后说：
+
+> 阅读 AGENTS.md 和 .agents/skills/sts-setup/SKILL.md，按这个 Skill 安装并验证本项目。完成后简短报告结果和下一步。
+
+Agent 会检查 uv、安装锁定的 Python 环境、准备目录，并实际测试 Notebook 内核和 JupyterLab。需要下载时按 Agent 提示批准；不用自己分别安装 Python、Jupyter。不支持自动发现 Skill 的 Agent 也可以直接读取这个文件。
+
+部署成功后，**重启 Agent 软件，在同一目录开启新会话**，再跟着[入门教程](guides/getting-started.zh-CN.md)操作。重启是保守的入门步骤，不代表所有 Agent 都有这个技术要求。
+
+想手动安装？教程保留了手动步骤。已有 uv 时，可运行统一部署与验证入口：
+
+```powershell
+./scripts/setup.ps1
+```
+
+之后需要启动 JupyterLab 时，在项目目录打开终端，运行：
 
 ```sh
-uv sync --locked
-uv run python scripts/init_workspace.py
 uv run jupyter lab
 ```
 
@@ -20,7 +32,7 @@ uv 管理 Python 和项目的 `.venv`，无需另装 Python/Jupyter，也不用�
 
 ## 和 Agent 一起复习
 
-项目自带三个按需加载的[学习 Skills](guides/skills.zh-CN.md)：课程初始化、学习会话和按需制卡。你自然描述任务，Agent 按对应流程执行；指南也说明了无法自动发现时如何直接读取文件。
+项目自带按需加载的 [Skills](guides/skills.zh-CN.md)：环境部署、课程初始化、学习会话和按需制卡。你自然描述任务，Agent 按对应流程执行；指南也说明了无法自动发现时如何直接读取文件。
 
 使用能操作文件的 Agent，例如 Codex 或 OpenCode，另行安装并登录。在 Agent 中打开本项目目录，把 PDF 放入 `materials/`，然后说：
 

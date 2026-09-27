@@ -4,7 +4,17 @@
 
 你会使用两个窗口：**AI Agent** 负责对话、查阅材料和修改文件，浏览器里的 **JupyterLab** 负责阅读笔记、运行代码和作答。JupyterLab 不是聊天窗口；两者访问的是电脑上的同一批文件。
 
-## 1. 下载模板，安装 uv
+## 推荐：让 Agent 完成部署
+
+下载、解压仓库，用能操作文件的 Agent 打开项目目录，说：
+
+> 阅读 AGENTS.md 和 .agents/skills/sts-setup/SKILL.md，按这个 Skill 安装并验证本项目。
+
+检查通过后，重启 Agent 软件，在同一目录开启新会话。**跳过下面的手动步骤 1–3，从第 4 步开始。** 在此之前把第一份 PDF 放进 `materials/`。完整原创 PDF 示例课程尚未加入；当前[原创论证例子](../examples/README.zh-CN.md)展示讲解风格，本教程则带你处理自己的第一份课件。
+
+部署不会开始学习会话，也不会留下运行中的 JupyterLab。可以让新会话中的 Agent 带你阅读本教程。部署失败时不能视为就绪：提供失败阶段和错误，不要提供私人令牌。最近的部署状态记录在 `work/setup/report.json`。
+
+## 1. 手动备用方案：下载模板，安装 uv
 
 在[仓库页面](https://github.com/ydzat/source-to-study)选择 **Code → Download ZIP**，解压到一个以后容易找到的文件夹。也可以使用 Git 克隆；下载 ZIP 不需要安装 Git 或注册 GitHub。
 
@@ -35,9 +45,10 @@ cd "C:\your\folder\source-to-study-main"
 ```sh
 uv sync --locked
 uv run python scripts/init_workspace.py
+uv run python scripts/check_setup.py
 ```
 
-第一条命令会在需要时下载指定 Python，并将锁定依赖安装进项目的 `.venv`，首次需要联网，可能耗时数分钟。第二条创建学习目录和空课程档案，不覆盖已有文件。不需要手动激活虚拟环境。环境与锁文件机制见 [uv 项目指南](https://docs.astral.sh/uv/guides/projects/)。
+第一条命令会在需要时下载指定 Python，并将锁定依赖安装进项目的 `.venv`，首次需要联网，可能耗时数分钟。第二条创建学习目录和空课程档案，不覆盖已有文件。第三条检查真实内核，短暂启动并停止 JupyterLab，不开始学习会话。不需要手动激活虚拟环境。环境与锁文件机制见 [uv 项目指南](https://docs.astral.sh/uv/guides/projects/)。
 
 把第一份 PDF 复制到 `materials/`。先从一份课件开始，不必一次处理整个学期。其他格式可让 Agent 读取，或另行转成 PDF；当前预处理脚本只接收 PDF，不改写原材料。
 

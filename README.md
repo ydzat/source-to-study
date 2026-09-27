@@ -6,11 +6,23 @@ Study your own course materials with a file-capable AI Agent. The Agent prepares
 
 ## Install and start
 
-Download and extract this repository. Install [uv](https://docs.astral.sh/uv/getting-started/installation/), then open a terminal in the folder containing `pyproject.toml` and run:
+On Windows, download and extract this repository. Open the extracted folder in an already installed, signed-in, file-capable AI Agent (for example Codex or OpenCode), then say:
+
+> Read AGENTS.md and .agents/skills/sts-setup/SKILL.md. Follow that skill to install and verify this project. Give me a brief result and the next step.
+
+The Agent checks uv, installs the locked Python environment, prepares your folders, and tests a real Notebook kernel and JupyterLab. Approve necessary downloads when your Agent asks. You do not need to install Python or Jupyter separately. This direct-file request also works when native skill discovery is unavailable.
+
+After successful setup, **restart the Agent application and open a new session in this folder**, then follow [the getting-started tutorial](guides/getting-started.md). Restarting is a conservative onboarding step, not a requirement of every Agent.
+
+Prefer manual installation? Follow the tutorial's manual steps. If uv is already available, the verified setup entry point is:
+
+```powershell
+./scripts/setup.ps1
+```
+
+To start JupyterLab afterward, open a terminal in the project folder and run:
 
 ```sh
-uv sync --locked
-uv run python scripts/init_workspace.py
 uv run jupyter lab
 ```
 
@@ -20,7 +32,7 @@ uv manages Python and the project's `.venv`; there is no separate Python/Jupyter
 
 ## Study with your Agent
 
-The project includes three on-demand [study skills](guides/skills.md): course setup, study sessions, and requested card export. You can describe the task naturally; the Agent follows the matching workflow. The guide also explains direct-file use if native discovery is unavailable.
+The project includes on-demand [skills](guides/skills.md) for environment setup, course preparation, study sessions, and requested card export. You can describe the task naturally; the Agent follows the matching workflow. The guide also explains direct-file use if native discovery is unavailable.
 
 Use a file-capable agent such as Codex or OpenCode, installed and authenticated separately. Open this project folder in it. Copy your PDF into `materials/`, then say:
 

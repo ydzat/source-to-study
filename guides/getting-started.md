@@ -4,7 +4,17 @@ English · [简体中文](getting-started.zh-CN.md)
 
 You will use two windows: an **AI Agent** to discuss the course and edit files, and **JupyterLab** in your browser to read and run your notes. JupyterLab is not the chat window. Both work with the same files on your computer.
 
-## 1. Download the template and install uv
+## Recommended: let your Agent set up the project
+
+Download/extract the repository and open its folder in your file-capable Agent. Say:
+
+> Read AGENTS.md and .agents/skills/sts-setup/SKILL.md. Install and verify this project following that skill.
+
+After its checks pass, restart the Agent application and open a new session in the same folder. **Skip manual steps 1–3 below and begin at step 4.** Copy your first PDF into `materials/` before that step. The full original PDF example course is not yet included; the current [original argument example](../examples/README.md) illustrates the teaching style, while this tutorial walks through your own first lecture.
+
+Setup does not start your learning session or leave JupyterLab running. Ask the new Agent to help with this tutorial. A failed setup is not ready: give it the failing stage and error, not private tokens. The latest deployment status is in `work/setup/report.json`.
+
+## 1. Manual alternative: download the template and install uv
 
 On the [repository page](https://github.com/ydzat/source-to-study), choose **Code → Download ZIP**, then extract it to a folder you can find again. Alternatively, use Git. Neither Git nor a GitHub account is needed for the ZIP route.
 
@@ -35,9 +45,10 @@ Replace this illustrative path; do not copy it literally. All remaining commands
 ```sh
 uv sync --locked
 uv run python scripts/init_workspace.py
+uv run python scripts/check_setup.py
 ```
 
-The first command downloads the selected Python if necessary and installs the locked dependencies into `.venv`. It can take a few minutes and needs internet access. The second creates your local study directories and an empty course profile without replacing existing files. No manual environment activation is needed. See [uv's project guide](https://docs.astral.sh/uv/guides/projects/) for the environment and lockfile model.
+The first command downloads the selected Python if necessary and installs the locked dependencies into `.venv`. It can take a few minutes and needs internet access. The second creates your local study directories and an empty course profile without replacing existing files. The third checks the actual kernel and briefly starts/stops JupyterLab; it does not open a study session. No manual environment activation is needed. See [uv's project guide](https://docs.astral.sh/uv/guides/projects/) for the environment and lockfile model.
 
 Copy your first PDF into `materials/`. Start with one lecture, not the whole semester. Other formats can be read by your agent or converted to PDF separately; the preprocessing script currently accepts PDF only. Original materials are never rewritten.
 

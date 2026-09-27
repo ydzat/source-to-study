@@ -10,6 +10,7 @@
 
 | 任务 | Skill |
 |---|---|
+| 安装、验证或修复 Windows 项目环境 | [sts-setup](.agents/skills/sts-setup/SKILL.md) |
 | 初始化课程、预处理来源或创建课件框架 | [sts-course-setup](.agents/skills/sts-course-setup/SKILL.md) |
 | 讲解/修改知识点、测验、恢复或结束实际学习 | [sts-study-session](.agents/skills/sts-study-session/SKILL.md) |
 | 按需生成/修改卡片或导出导入包 | [sts-export-cards](.agents/skills/sts-export-cards/SKILL.md) |
