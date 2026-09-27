@@ -8,9 +8,9 @@ Manual AI-assisted study can produce broken asset paths, unsupported citations, 
 
 ## Proposal
 
-Build a minimal pipeline around a rights-cleared original mini-course: source indexing, editable lesson inputs, validated Notebook output, review-card validation, and optional Anki export. Preserve learner responses across rebuilds. Keep reusable logic independent of course, machine paths, model provider, and optional UI.
+Build a minimal pipeline around a rights-cleared mini-course: source indexing, editable lesson inputs, validated Notebook output, review-card validation, and optional Anki export. The bundled external source is [OnlineStatBook central tendency](../../../examples/central-tendency/README.md); learners generate their own notes through the [practice tutorial](../../../guides/first-session.md), rather than using a prewritten reference Notebook. Preserve learner responses across rebuilds. Keep reusable logic independent of course, machine paths, model provider, and optional UI.
 
-The [local tool reference](../../../guides/tools.md) owns available commands and formats. This proposal remains open for the complete original course and clean-workspace acceptance; existing tools do not establish that the educational example has shipped. Anki integration is file-only, not direct application control.
+The [local tool reference](../../../guides/tools.md) owns available commands and formats. The tutorial and Chinese-language Notebook workflow have shipped and passed [live acceptance](../implemented/0006-live-tutorial-acceptance.md). This broader proposal remains open for an independent English-language run and an integrated source-to-card acceptance run; existing export tests do not establish that full workflow. Anki integration is file-only, not direct application control.
 
 ## Alternatives considered
 
@@ -18,7 +18,7 @@ A document-only template supports immediate use but cannot verify executable art
 
 ## Acceptance criteria
 
-- A fresh workspace can run the original example using documented dependencies and commands.
+- A fresh workspace can run the example using documented dependencies and commands.
 - Source locators are checked; missing files and unsupported citations fail visibly.
 - A generated Notebook runs from its own directory in a clean kernel, and rebuilding preserves learner answers.
 - Cards have validated identifiers, prompts, answers, and sources; an exported package can be inspected before import.

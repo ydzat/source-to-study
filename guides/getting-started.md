@@ -10,7 +10,7 @@ Download/extract the repository and open its folder in your file-capable Agent. 
 
 > Read AGENTS.md and .agents/skills/sts-setup/SKILL.md. Install and verify this project following that skill.
 
-After its checks pass, restart the Agent application and open a new session in the same folder. **Skip manual steps 1–3 below and begin at step 4.** Copy your first PDF into `materials/` before that step. The full original PDF example course is not yet included; the current [original argument example](../examples/README.md) illustrates the teaching style, while this tutorial walks through your own first lecture.
+After its checks pass, restart the Agent application and open a new session in the same folder. **Start with [the short practice tutorial](first-session.md)** using the bundled PDF. To use your own lecture instead, skip manual steps 1–3 below, copy your first PDF into `materials/`, and begin at step 4.
 
 Setup does not start your learning session or leave JupyterLab running. Ask the new Agent to help with this tutorial. A failed setup is not ready: give it the failing stage and error, not private tokens. The latest deployment status is in `work/setup/report.json`.
 
@@ -60,7 +60,7 @@ Use a file-capable agent application, for example Codex or OpenCode. These are e
 
 Open **this same project folder** in the agent. Tell it:
 
-> Read AGENTS.md and guides/tools.md. Use uv for this project. My course is [subject]; my goal is [goal or assessment]; teach me in [language]. The first source is materials/[filename.pdf]. Help complete study/COURSE.md. Inspect the source and identify its knowledge units. First show me the unit division and source page ranges; do not write all explanations yet.
+> Please preprocess materials/[filename.pdf]. I'm studying [subject] to [goal or assessment], I know [starting knowledge], and I'd like to study in [language].
 
 Answer questions about your starting knowledge, assessment requirements, and permitted AI use. Confirm that the agent has found the correct file. Access to local files does not imply local model processing: check your provider's data policy before exposing private material.
 
@@ -68,7 +68,7 @@ Answer questions about your starting knowledge, assessment requirements, and per
 
 Once the source scope and unit division are agreed, say:
 
-> Prepare the PDF with scripts/prepare_pdf.py. Create a lesson spec in study/specs/ following guides/tools.md, then build study/notes/lecture01.ipynb with scripts/nb_build.py. Keep untaught units marked todo. Check the framework. If early pages repeat the previous lecture, verify that against the previous material and keep a recap pointer without deleting any source pages.
+> That division looks good. Go ahead.
 
 The agent runs the scripts; you do not need to author the JSON spec. The framework is a source map and placeholders, **not a completed lesson**. You should receive a Notebook path, covered page range, and validation result.
 
@@ -88,11 +88,11 @@ In JupyterLab's left file browser, open `study`, then `notes`, then double-click
 
 Return to the Agent window:
 
-> Let's study K01 only. Explain the goal in the source, define new symbols, and connect every intermediate step to the result. Use one concrete example where possible, with figures immediately below their concepts and captions below the figures. Update the Notebook through its spec, run the checks, and leave other units as placeholders. Give me a short change summary rather than repeating the whole lesson here.
+> Let's start K01.
 
 Read the updated Notebook in JupyterLab. Make predictions before running experiments. Ask specific follow-ups in the Agent window, for example:
 
-> I cannot see how this input becomes the next object. Show the intermediate result and revise that section of K01, rather than appending a disconnected answer.
+> I don't understand this step. How does the input turn into that result?
 
 When ready, ask to move to K02. For a subject without useful executable experiments, use diagrams, worked reasoning, and retrieval practice instead of artificial code exercises.
 
@@ -102,13 +102,13 @@ Before the agent rebuilds an open Notebook, **save and close its tab**. After th
 
 At the end, say:
 
-> Record what we actually studied, my observed performance, unresolved questions, and the next starting point in study/sessions/. Update the course profile's links. Do not mark mastery just because you generated the notes.
+> Let's stop here today. Record where we should pick up next time.
 
 Save your Notebook. To stop JupyterLab, return to its terminal, press `Ctrl+C`, and confirm shutdown if asked. Closing the browser alone need not stop the server. Next time, enter the same folder, run `uv run jupyter lab`, and ask your agent to read `study/COURSE.md`, the latest session, and relevant notes before continuing.
 
 Cards are optional and user-requested:
 
-> Based on these completed notes [paths], and these source sections [paths/pages, if needed], prepare focused review cards. Check the sources, include useful diagrams, and generate an import bundle following guides/anki.md. Do not connect to or modify Anki.
+> Make Anki cards from these notes: [paths].
 
 Follow the separate [Anki import guide](anki.md). No Anki installation is needed to generate the files.
 

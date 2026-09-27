@@ -12,9 +12,9 @@
 
 Agent 会检查 uv、安装锁定的 Python 环境、准备目录，并实际测试 Notebook 内核和 JupyterLab。需要下载时按 Agent 提示批准；不用自己分别安装 Python、Jupyter。不支持自动发现 Skill 的 Agent 也可以直接读取这个文件。
 
-部署成功后，**重启 Agent 软件，在同一目录开启新会话**，再跟着[入门教程](guides/getting-started.zh-CN.md)操作。重启是保守的入门步骤，不代表所有 Agent 都有这个技术要求。
+部署成功后，**重启 Agent 软件，在同一目录开启新会话**，再用自带 PDF 跟着[简短跟练教程](guides/first-session.zh-CN.md)操作。重启是保守的入门步骤，不代表所有 Agent 都有这个技术要求。
 
-想手动安装？教程保留了手动步骤。已有 uv 时，可运行统一部署与验证入口：
+想手动安装？请看[手动安装步骤](guides/getting-started.zh-CN.md)。已有 uv 时，可运行统一部署与验证入口：
 
 ```powershell
 ./scripts/setup.ps1
@@ -28,7 +28,7 @@ uv run jupyter lab
 
 uv 管理 Python 和项目的 `.venv`，无需另装 Python/Jupyter，也不用手动激活环境。使用 JupyterLab 时保持最后这个终端运行。
 
-**第一次接触这些工具？请跟着[Windows 完整入门教程](guides/getting-started.zh-CN.md)操作。** 教程说明安装方法、在哪里打开终端、在哪个窗口聊天，以及怎样找到 Notebook。
+**第一次用 STS 学习？请跟着[简短跟练教程](guides/first-session.zh-CN.md)操作。** 手动安装或排查问题时，再看[Windows 详细指南](guides/getting-started.zh-CN.md)。
 
 ## 和 Agent 一起复习
 
@@ -36,11 +36,11 @@ uv 管理 Python 和项目的 `.venv`，无需另装 Python/Jupyter，也不用�
 
 使用能操作文件的 Agent，例如 Codex 或 OpenCode，另行安装并登录。在 Agent 中打开本项目目录，把 PDF 放入 `materials/`，然后说：
 
-> 阅读 AGENTS.md 和 guides/tools.zh-CN.md。我的课程是【科目】，目标是【目标】，教学语言是【语言】，来源是 materials/【文件名.pdf】。先建立课程档案、检查来源并提出知识点划分。等我确认后，在 study/notes/ 生成 Notebook 框架，不要一次写完所有讲解。
+> 帮我预处理 materials/【文件名.pdf】。我在学【科目】，目标是【目标】，目前会【已有基础】，用【语言】讲解。
 
 在 JupyterLab 左侧文件浏览器进入 `study/notes/`，打开生成的 `.ipynb`。继续**在 Agent 中**对话，例如：
 
-> 现在只讲 K01。先解释符号，再从源课件的目标一步步推到结果，配图和具体例子。更新对应笔记并运行检查，等我提问后再推进。
+> 我们从 K01 开始吧。
 
 Agent 重建前先保存并关闭 Notebook 标签页，完成后重新打开。在“我的作答”单元中填写答案。学习结束时让 Agent 记录实际表现和下次起点；新开聊天时，先让它读取课程档案和最新会话再继续。
 

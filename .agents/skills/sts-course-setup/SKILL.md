@@ -7,6 +7,10 @@ description: Set up an STS course or prepare a new lecture's source map and Note
 
 Work from the STS repository root, three directories above this file. Read [AGENTS.md](../../../AGENTS.md). Use existing scripts; skill loading does not authorize dependency installation or external writes.
 
+## What preprocessing means here
+
+A learner's short request to preprocess a course or PDF means preparing it for study: source extraction, a source-grounded unit map, and a validated Notebook framework. Extraction alone is an intermediate step, not completion. If a necessary scope choice is missing, ask a concise question and resume the remaining steps after the reply. Stop at extraction only when the learner explicitly requests extraction alone.
+
 ## Establish the input
 
 - Read an existing study/COURSE.md before changing it. For a new course, use [the course form](../../../templates/course.md) to establish the learner's goal, language, prior knowledge, source priority, and assessment policy. Do not reset existing work.

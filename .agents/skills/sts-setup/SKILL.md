@@ -36,8 +36,8 @@ If verification fails, inspect the named stage and minimal relevant error. Fix o
 On success, use at most two short lines in the user's language:
 
 > STS is ready: the project environment, Notebook kernel, and JupyterLab check passed.
-> Restart your Agent application and open a new session in this folder, then follow [the getting-started tutorial](../../../guides/getting-started.md).
+> Restart your Agent application and open a new session in this folder, then follow [the short practice tutorial](../../../guides/first-session.md).
 
-For Chinese, link [the Chinese tutorial](../../../guides/getting-started.zh-CN.md). Ask for the restart as a conservative onboarding step, not a universal host requirement. The tutorial is the current manual/learning walkthrough; do not claim the full original PDF sample course is available. Do not begin teaching, fill the course profile, or generate cards as part of setup.
+For Chinese, link [the Chinese practice tutorial](../../../guides/first-session.zh-CN.md). Ask for the restart as a conservative onboarding step, not a universal host requirement. The tutorial uses the bundled public-domain PDF; learners generate their own notes with the Agent, rather than opening a prewritten completed course. Do not begin teaching, fill the course profile, or generate cards as part of setup.
 
 If blocked, report the failed stage and the specific user action needed instead of the success handoff. Preserve partial installation so a later run can resume safely.

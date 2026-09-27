@@ -4,6 +4,8 @@ English · [简体中文](README.zh-CN.md)
 
 This small example was authored for this template, not extracted from a course. It illustrates lesson organization; it is not a complete course or an executable pipeline.
 
+To practise with a public-domain PDF, follow [the short practice tutorial](../guides/first-session.md). Source details and the 12-page learning scope are in [Central tendency](central-tendency/README.md).
+
 ## Goal and input
 
 Determine whether a conclusion follows from premises. Our premises are: “Every object in collection A is blue” and “Object t belongs to collection A.” The proposed conclusion is “Object t is blue.”

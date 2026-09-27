@@ -8,12 +8,12 @@
 |---|---|
 | 根目录 README 双语文件 | 学习者初始化与学习流程 |
 | 根目录 AGENTS 双语文件 | AI 导师的常驻规则 |
-| `.agents/skills/` | 按需加载的课程初始化、学习会话和制卡流程 |
+| `.agents/skills/` | 按需加载的环境部署、课程初始化、学习会话和制卡流程 |
 | `guides/` | 学习者安装、本地工具约定和手动 Anki 导入 |
 | `templates/` | 中英字段空表单，用学习者选定语言填写一份 |
 | `scripts/` 与 `tests/` | 通用本地操作与行为测试 |
 | `pyproject.toml`、`uv.lock`、`.python-version` | 直接依赖、解析锁与项目 Python 选择 |
-| `examples/` | 学习流程的原创样例 |
+| `examples/` | 原创学习样例及注明来源、权利清晰的外部材料 |
 | `docs/` | 维护约定与设计记录 |
 
 ## 本地学习工作区

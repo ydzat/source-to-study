@@ -12,9 +12,9 @@ On Windows, download and extract this repository. Open the extracted folder in a
 
 The Agent checks uv, installs the locked Python environment, prepares your folders, and tests a real Notebook kernel and JupyterLab. Approve necessary downloads when your Agent asks. You do not need to install Python or Jupyter separately. This direct-file request also works when native skill discovery is unavailable.
 
-After successful setup, **restart the Agent application and open a new session in this folder**, then follow [the getting-started tutorial](guides/getting-started.md). Restarting is a conservative onboarding step, not a requirement of every Agent.
+After successful setup, **restart the Agent application and open a new session in this folder**, then follow [the short practice tutorial](guides/first-session.md) with the bundled PDF. Restarting is a conservative onboarding step, not a requirement of every Agent.
 
-Prefer manual installation? Follow the tutorial's manual steps. If uv is already available, the verified setup entry point is:
+Prefer manual installation? Follow [the manual setup steps](guides/getting-started.md). If uv is already available, the verified setup entry point is:
 
 ```powershell
 ./scripts/setup.ps1
@@ -28,7 +28,7 @@ uv run jupyter lab
 
 uv manages Python and the project's `.venv`; there is no separate Python/Jupyter installation or manual activation step. Leave the last terminal running while you use JupyterLab.
 
-**First time using these tools? Follow [the Windows step-by-step tutorial](guides/getting-started.md).** It explains installation, where to open the terminal, which window to talk in, and how to find your Notebook.
+**First time studying with STS? Follow [the short practice tutorial](guides/first-session.md).** For manual installation or troubleshooting, use [the detailed Windows guide](guides/getting-started.md).
 
 ## Study with your Agent
 
@@ -36,11 +36,11 @@ The project includes on-demand [skills](guides/skills.md) for environment setup,
 
 Use a file-capable agent such as Codex or OpenCode, installed and authenticated separately. Open this project folder in it. Copy your PDF into `materials/`, then say:
 
-> Read AGENTS.md and guides/tools.md. My course is [subject], my goal is [goal], and my preferred teaching language is [language]. The source is materials/[filename.pdf]. Establish my course profile, inspect the source, and propose knowledge units. After I confirm them, generate a Notebook framework in study/notes/. Do not write every lesson yet.
+> Please preprocess materials/[filename.pdf]. I'm studying [subject] to [goal], I know [starting knowledge], and I'd like to study in [language].
 
 Open the resulting `.ipynb` in JupyterLab's left file browser under `study/notes/`. Continue the conversation **in your Agent**, for example:
 
-> Teach K01 only. Define the notation, show the steps from the source's goal to its result, and use figures and a worked example. Update the corresponding notes and run the checks. Wait for my questions before moving on.
+> Let's start K01.
 
 Save and close the Notebook tab before an Agent rebuild; reopen afterward. Use the “My response” cells for your answers. At session end, ask the Agent to record your actual performance and next starting point. On a new chat, ask it to read the course profile and latest session before resuming.
 

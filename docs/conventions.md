@@ -4,7 +4,7 @@ English · [简体中文](conventions.zh-CN.md)
 
 ## Publication boundary
 
-Publish reusable instructions, blank forms, rights-cleared original examples, and maintainer documents. Personal course material, extracted text, screenshots, notes, responses, logs, credentials, and derived assets remain private by default.
+Publish reusable instructions, blank forms, original examples, attributed external examples with verified reuse rights, and maintainer documents. Personal course material, extracted text, screenshots, notes, responses, logs, credentials, and derived assets remain private by default.
 
 `materials/`, `study/`, `private/`, `cache/`, `work/`, and `output/` are ignored. Before publishing, inspect the actual staged files and relevant Git history; inspect embedded Notebook outputs and binary assets separately. Ignore rules do not remove tracked content or establish rights. Keep the existing MIT license; record any independently licensed assets explicitly.
 

@@ -8,12 +8,12 @@ English · [简体中文](architecture.zh-CN.md)
 |---|---|
 | Root README pair | Learner setup and study workflow |
 | Root AGENTS pair | AI tutor's standing instructions |
-| `.agents/skills/` | On-demand course setup, study-session, and card-export procedures |
+| `.agents/skills/` | On-demand environment setup, course preparation, study-session, and card-export procedures |
 | `guides/` | Learner setup, local tool contracts, and manual Anki import |
 | `templates/` | Bilingual blank forms, filled once in the learner's language |
 | `scripts/` and `tests/` | Portable local operations and behavioral checks |
 | `pyproject.toml`, `uv.lock`, `.python-version` | Direct dependencies, resolved lock, and project Python selection |
-| `examples/` | Original examples of the learning workflow |
+| `examples/` | Original learning examples and attributed, rights-cleared external sources |
 | `docs/` | Maintainer contracts and design records |
 
 ## Local learning workspace

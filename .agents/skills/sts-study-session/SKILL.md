@@ -15,6 +15,8 @@ Inspect the source itself. When missing prerequisites are covered by another sup
 
 ## Perform the requested mode
 
+For an established study workspace, a short request such as "Start K01" means author that unit in the existing notes, not give a chat-only introduction. A follow-up about its explanation likewise means improve the relevant note section. The learner need not repeat "update the Notebook". Complete the agreed unit's learning chain, leaving later units untouched; pause at the unit boundary rather than replacing the requested lesson with an unsolicited quiz. Explicit chat-only, quiz, or smaller-scope requests override this default. Keep optional recall prompts in the notes without requiring answers before delivering the lesson.
+
 - **Teach or revise:** use [the lesson form](../../../templates/lesson.md) as guidance. Build the source-goal-to-result chain, using questions to find gaps. Preserve the course's notation and integrate corrections into the owning section. Keep figures and captions beside the corresponding reasoning, with one worked input across stages where useful. Do not append a chat transcript.
 - **Quiz:** match the course's assessment language and form. Ask before revealing the answer, then assess the actual response. Store review material using [the review form](../../../templates/review.md), without automatically exporting cards.
 - **Resume:** verify the recorded next point against current notes and the learner's request. Do not assume that generated or previously read material was independently mastered.
@@ -26,4 +28,4 @@ For Notebook changes, read Notebook source and build and Execution checks in [th
 
 Build and check the Notebook from the documented commands. Verify computed results, image references, and the source support separately; execution is not semantic validation. A failed check stops delivery until fixed or explicitly reported as unresolved. For Markdown-only notes, check citations, figures, and worked reasoning without introducing unnecessary code.
 
-Deliver a brief summary and the edited file link, not the full lesson again. Pause at the requested unit boundary. Do not generate cards or advance mastery merely because the notes are complete.
+Deliver one or two sentences describing what changed, the edited file link, and the verification result. This also applies when a clarification is phrased as a direct question: at most give its core answer in one sentence; keep worked examples, tables, formulas, and detailed reasoning in the notes rather than repeating them in chat. Expand in chat only when the learner explicitly requests it. Pause at the requested unit boundary. Do not generate cards or advance mastery merely because the notes are complete.
