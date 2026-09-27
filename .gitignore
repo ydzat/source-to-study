@@ -1,0 +1,22 @@
+# Private course materials and user-specific state
+/materials/
+/private/
+/work/
+/output/
+/cache/
+
+# Local configuration and credentials
+/config.local.json
+.env
+.env.*
+!.env.example
+
+# Python and notebook runtime artifacts
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Generated packages; original, rights-cleared examples belong under examples/
+*.apkg
