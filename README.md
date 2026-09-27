@@ -1,39 +1,44 @@
 # Source to Study
 
-**Turn your own course materials into source-grounded notes, executable learning exercises, review questions, and spaced-repetition cards.**
+English · [简体中文](README.zh-CN.md)
 
-[简体中文](README.zh-CN.md) · English
+A reusable workspace for studying your own course materials with an AI tutor. Start with a source, build an explanation you can verify, practise without the answer, and keep track of what you can reproduce independently.
 
-> **Project status: design scaffold.** This repository does not yet contain a runnable end-to-end pipeline or a complete example. Do not treat the planned commands and components below as implemented.
+## Start your course
 
-Source to Study is a course-agnostic, AI-assisted study workflow. It is designed to keep the learner in charge: the AI explains and drafts; source references, executable checks, and closed-book recall make those drafts auditable. Oral exams are one possible use case, not the default assumption for every course.
+1. Download or clone this template. Put materials you are allowed to use in a local `materials/` directory.
+2. Open the workspace with an AI assistant that can read local files. Ask it to read [AGENTS.md](AGENTS.md); if your tool does not load that file automatically, supply it explicitly.
+3. Send the following prompt, filling in the brackets:
 
-## Intended learning loop
+> Read AGENTS.md. Help me set up a course using templates/course.md in study/COURSE.md. My subject is [subject], my goal or assessment is [goal], and my preferred teaching language is [language]. My materials are in [path]. Ask about missing learning requirements, inspect the materials, and create a source map. Do not start teaching until we agree on the scope and starting point.
 
-1. Bring your own lawfully obtained materials into a local, Git-ignored `materials/` directory.
-2. Index the sources and verify page or section references before writing claims.
-3. Build a teaching notebook around the source's actual learning goal: **goal → inputs → intermediate objects and operations → derivation or computation → verifiable result**.
-4. Use **Predict → Run → Break it → Reproduce** to test understanding. Diagrams and worked examples belong next to the concepts they explain.
-5. Maintain a concise review source and derive cards from it. Track what was taught separately from what the learner can reproduce without help.
+4. After agreeing on the starting point, ask: “Teach the first unit and maintain my notes using templates/lesson.md. Pause for my questions before advancing.”
+5. At the end of a real study session, ask the assistant to record your next step and actual performance using [the session template](templates/session.md). In a new chat, ask it to read your course profile and latest session before resuming.
 
-This is a target workflow, **not a claim that it already runs in this scaffold**.
+Your assistant creates the local `study/` directory. It contains your course profile, source map, notes, review questions, and session records. These are your working files, not contributions to this public template.
 
-## What will and will not be published
+## What a study session produces
 
-The public repository will contain reusable instructions, portable code, tests, and a small **original** sample course. It will not contain the author's university slides, slide screenshots, extracted PDF text, private notes, personal study history, credentials, or generated artifacts from those materials. A `.gitignore` is a safety layer, not proof that a file is safe to publish; every release will require a content and history review. See [Content and privacy conventions](docs/conventions.md).
+A lesson connects the source's goal to definitions, intermediate steps, a worked example, and a checkable result. Figures sit beside the explanation they support. Your questions help identify missing links; they do not turn the notes into a chat transcript.
 
-## Planned architecture
+Use [review questions](templates/review.md) to practise recall separately from reading. Tell the tutor whether you are preparing for a written exam, oral exam, project, or self-study: no assessment format is assumed.
 
-The core will be local-first and AI-provider-independent. Jupyter notebooks provide the first interactive learning surface; a separate optional UI may be added only after the underlying workflow works and is tested. See [Architecture](docs/architecture.md).
+Markdown templates work without a build system. This repository does not yet provide source-extraction scripts, a Notebook builder, or Anki export. The tutor must not invent commands or claim those capabilities exist.
 
-## Current repository contents
+## Files you use
 
-- `AGENTS.md`: generic instructions for an AI assistant working in a user's copy, with a Chinese reading counterpart.
-- `docs/`: paired English and Simplified Chinese design and safety documents.
-- `examples/`: reserved for a future original, rights-cleared end-to-end sample.
+- [Course profile](templates/course.md): goals, sources, language, assessment rules, and scope.
+- [Lesson](templates/lesson.md): source-grounded teaching notes.
+- [Review](templates/review.md): retrieval questions and separate answers.
+- [Session](templates/session.md): observed performance and the next starting point.
+- [Small original example](examples/README.md): how a learning unit is organized.
 
-There is **no installation step yet**. The next milestone is one original sample course and a minimal pipeline that can run against it from a clean checkout.
+The forms contain English and Chinese field guidance; fill them in once in your chosen learning language.
 
-## License and contributions
+## Keep your materials private
 
-This project uses the [MIT License](LICENSE), matching the license already committed to the [GitHub repository](https://github.com/ydzat/source-to-study/blob/main/LICENSE). It applies only to material the project owner can license; it does not grant rights to users' course materials or unrelated third-party assets. Contributions and external course examples should wait until the rights and review process is documented.
+`materials/`, `study/`, `private/`, `cache/`, `work/`, and `output/` are ignored by Git. Ignoring files is not an access-control system: check your AI provider's data handling before sharing material, and inspect tracked files and history before publishing your workspace.
+
+The [MIT license](LICENSE) applies to this template, not automatically to your course materials. Use only material you are entitled to use and follow your institution's AI rules.
+
+Maintaining the template itself? See [developer documentation](docs/README.md).
