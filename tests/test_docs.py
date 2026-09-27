@@ -13,14 +13,14 @@ ROOT = Path(__file__).resolve().parents[1]
 class DocumentationTests(unittest.TestCase):
     def test_public_docs(self):
         files = list(ROOT.glob("*.md"))
-        for directory in ("guides", "docs", "templates", "examples"):
+        for directory in ("guides", "docs", "templates", "examples", ".agents/skills"):
             files.extend((ROOT / directory).rglob("*.md"))
         parser = MarkdownIt()
         for path in files:
             with self.subTest(path=path.relative_to(ROOT)):
                 text = path.read_text(encoding="utf-8")
                 self.assertTrue(text.endswith("\n"))
-                if "templates" not in path.parts and not path.name.endswith(".zh-CN.md"):
+                if "templates" not in path.parts and path.name != "SKILL.md" and not path.name.endswith(".zh-CN.md"):
                     self.assertTrue(path.with_name(path.stem + ".zh-CN.md").is_file())
                 stack = list(parser.parse(text))
                 while stack:

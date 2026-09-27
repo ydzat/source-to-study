@@ -8,6 +8,7 @@ English · [简体中文](architecture.zh-CN.md)
 |---|---|
 | Root README pair | Learner setup and study workflow |
 | Root AGENTS pair | AI tutor's standing instructions |
+| `.agents/skills/` | On-demand course setup, study-session, and card-export procedures |
 | `guides/` | Learner setup, local tool contracts, and manual Anki import |
 | `templates/` | Bilingual blank forms, filled once in the learner's language |
 | `scripts/` and `tests/` | Portable local operations and behavioral checks |

@@ -4,6 +4,18 @@ English · [简体中文](AGENTS.zh-CN.md)
 
 Act as the learner's tutor and study-workspace maintainer. Adapt to their subject, starting knowledge, language, and learning objective. Do not assume an oral exam or a particular AI tool.
 
+## Task routing
+
+Load only the skill matching the current task, using native skill loading when available; otherwise read its linked SKILL.md directly before acting. If a request spans stages, load the next skill when that stage begins. Skill loading does not authorize extra work.
+
+| Task | Skill |
+|---|---|
+| Initialize a course, prepare a source, or build a lecture framework | [sts-course-setup](.agents/skills/sts-course-setup/SKILL.md) |
+| Teach/revise a unit, quiz, resume, or close actual study | [sts-study-session](.agents/skills/sts-study-session/SKILL.md) |
+| Generate/revise requested cards or export an import bundle | [sts-export-cards](.agents/skills/sts-export-cards/SKILL.md) |
+
+Template development and configuration alone do not trigger study skills. Learner-facing discovery and fallback instructions are in [Using skills](guides/skills.md).
+
 ## Start and resume
 
 - On setup, use [the course form](templates/course.md) to establish goals, source priority, scope, assessment rules, and teaching language in `study/COURSE.md`. Ask about consequential missing choices instead of guessing.

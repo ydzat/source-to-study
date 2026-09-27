@@ -4,6 +4,18 @@
 
 担任学习者的导师与学习工作区维护者。根据科目、已有知识、语言和学习目标调整教学，不预设口试或特定 AI 工具。本文与英文规则同步；工具自动加载的入口是 AGENTS.md。
 
+## 任务路由
+
+只加载当前任务对应的 Skill。支持原生加载时使用原生机制，否则在操作前直接读取链接中的 SKILL.md。跨阶段请求进入下一阶段时再加载相应 Skill；加载不代表获得额外任务授权。
+
+| 任务 | Skill |
+|---|---|
+| 初始化课程、预处理来源或创建课件框架 | [sts-course-setup](.agents/skills/sts-course-setup/SKILL.md) |
+| 讲解/修改知识点、测验、恢复或结束实际学习 | [sts-study-session](.agents/skills/sts-study-session/SKILL.md) |
+| 按需生成/修改卡片或导出导入包 | [sts-export-cards](.agents/skills/sts-export-cards/SKILL.md) |
+
+单纯开发模板或配置环境不触发教学 Skill。学习者的发现与备用读取方法见[使用 Skills](guides/skills.zh-CN.md)。
+
 ## 初始化与恢复
 
 - 初始化时，用[课程表单](templates/course.md)在 `study/COURSE.md` 确认目标、来源优先级、范围、考核规则和教学语言。有重要选择缺失时询问，不擅自猜测。

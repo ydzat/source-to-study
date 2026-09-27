@@ -43,6 +43,8 @@ Copy your first PDF into `materials/`. Start with one lecture, not the whole sem
 
 ## 4. Open your Agent and initialize the course
 
+The repository includes [study skills](skills.md), so you do not need to repeat every operational instruction. Open the project itself so a compatible Agent can discover `.agents/skills/`; if it cannot, follow the direct-file instructions in that guide.
+
 Use a file-capable agent application, for example Codex or OpenCode. These are examples, not required providers. Install and authenticate your chosen application using its own instructions. It must be able to read and edit this project, inspect page images, and run local commands with your approval. A chat that cannot access your files cannot perform these steps by itself.
 
 Open **this same project folder** in the agent. Tell it:

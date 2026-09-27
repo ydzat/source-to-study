@@ -14,6 +14,8 @@ Maintain English and Chinese prose as `name.md` and `name.zh-CN.md`, updating bo
 
 The short forms in `templates/` use bilingual field guidance in one file. Personal completed notes use the learner's language, not mandatory parallel translations. This prevents two copies of live course state.
 
+Instruction entry points under `.agents/skills/` use one English `SKILL.md` per task. The bilingual [skills guide](../guides/skills.md) explains them to learners; do not create duplicate machine entries for translations. Link shared schemas and scripts instead of copying them into skills.
+
 ## Verification
 
 Check relative links, required language pairs, the setup path, and consistency between claimed capabilities and actual files. Walk through a form as a learner; document checks cannot prove teaching quality. When executable features arrive, add behavioral tests and run the original example from a clean workspace.

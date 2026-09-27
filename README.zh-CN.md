@@ -20,6 +20,8 @@ uv 管理 Python 和项目的 `.venv`，无需另装 Python/Jupyter，也不用�
 
 ## 和 Agent 一起复习
 
+项目自带三个按需加载的[学习 Skills](guides/skills.zh-CN.md)：课程初始化、学习会话和按需制卡。你自然描述任务，Agent 按对应流程执行；指南也说明了无法自动发现时如何直接读取文件。
+
 使用能操作文件的 Agent，例如 Codex 或 OpenCode，另行安装并登录。在 Agent 中打开本项目目录，把 PDF 放入 `materials/`，然后说：
 
 > 阅读 AGENTS.md 和 guides/tools.zh-CN.md。我的课程是【科目】，目标是【目标】，教学语言是【语言】，来源是 materials/【文件名.pdf】。先建立课程档案、检查来源并提出知识点划分。等我确认后，在 study/notes/ 生成 Notebook 框架，不要一次写完所有讲解。

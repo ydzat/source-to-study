@@ -20,6 +20,8 @@ uv manages Python and the project's `.venv`; there is no separate Python/Jupyter
 
 ## Study with your Agent
 
+The project includes three on-demand [study skills](guides/skills.md): course setup, study sessions, and requested card export. You can describe the task naturally; the Agent follows the matching workflow. The guide also explains direct-file use if native discovery is unavailable.
+
 Use a file-capable agent such as Codex or OpenCode, installed and authenticated separately. Open this project folder in it. Copy your PDF into `materials/`, then say:
 
 > Read AGENTS.md and guides/tools.md. My course is [subject], my goal is [goal], and my preferred teaching language is [language]. The source is materials/[filename.pdf]. Establish my course profile, inspect the source, and propose knowledge units. After I confirm them, generate a Notebook framework in study/notes/. Do not write every lesson yet.
