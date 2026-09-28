@@ -12,7 +12,7 @@ STS 只导出文件，不读取 Anki 数据库、不启动 Anki、不安装插�
 
 ## 让 Agent 制卡
 
-告诉 Agent 使用哪些已完成笔记、需要哪些源课件范围、复习语言和范围。它应核验来源，围绕单一回忆目标出题，不把整段讲义塞进答案，并按工具参考生成 `study/review/cards.json`。先审阅拟生成内容，再要求导出。
+告诉 Agent 使用哪些已完成笔记、需要哪些源课件范围、复习语言和范围。它应核验来源，围绕单一回忆目标出题，并按工具参考生成 `study/review/cards.json`。先审阅拟生成内容，再要求导出。
 
 ```sh
 uv run python scripts/export_cards.py study/review/cards.json output/anki-review-01

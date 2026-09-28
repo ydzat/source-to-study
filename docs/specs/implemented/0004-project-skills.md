@@ -8,7 +8,7 @@ Learners must repeat operational prompts even though the repository already defi
 
 ## Decision
 
-Three instruction-only skills live under .agents/skills/: sts-course-setup, sts-study-session, and sts-export-cards. Standing principles remain in AGENTS.md, schemas and commands in guides/tools.md, and implementation in scripts/. Skills reference these owners rather than copying scripts or schemas. English SKILL.md files are machine entry points; the paired [learner guide](../../../guides/skills.md) explains their use in both languages.
+The initial three instruction-only skills were sts-course-setup, sts-study-session, and sts-export-cards. [0005](0005-agent-setup.md) added sts-setup; the current four entries are listed in [AGENTS.md](../../../AGENTS.md). Standing principles remain in AGENTS.md, schemas and commands in guides/tools.md, and implementation in scripts/. Skills link to those files. English SKILL.md files are machine entry points; the paired [learner guide](../../../guides/skills.md) explains their use in both languages.
 
 ## Alternatives considered
 

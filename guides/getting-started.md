@@ -94,7 +94,9 @@ Read the updated Notebook in JupyterLab. Make predictions before running experim
 
 > I don't understand this step. How does the input turn into that result?
 
-When ready, ask to move to K02. For a subject without useful executable experiments, use diagrams, worked reasoning, and retrieval practice instead of artificial code exercises.
+This question receives an answer in conversation. To revise the Notebook, add an explicit request such as “Please add this derivation to K01 in my notes.”
+
+When ready, ask to move to K02. For a subject without useful executable experiments, use diagrams, worked reasoning, and retrieval practice.
 
 Before the agent rebuilds an open Notebook, **save and close its tab**. After the rebuild, reopen it. Write answers in “My response” cells or your own added cells. Generated lesson cells come from the spec: direct edits there cause a rebuild conflict that the agent must reconcile, not overwrite. Rebuilds back up the existing file and preserve learner cells; generated code outputs are cleared and can be rerun. Added cells without a generated identity are retained at the end.
 
@@ -118,9 +120,9 @@ Follow the separate [Anki import guide](anki.md). No Anki installation is needed
 |---|---|
 | `pyproject.toml` cannot be found | Return to the extracted project folder, not `study/` or `.venv/`. |
 | A package is missing | Run `uv sync --locked`; start both JupyterLab and scripts with `uv run`. Ask the agent before adding course-specific dependencies with `uv add`. |
-| The check reports the wrong kernel | Ask the agent to inspect `uv run jupyter kernelspec list`; select/fix the project kernel rather than deleting global kernels. |
+| The check reports the wrong kernel | Ask the agent to inspect `uv run jupyter kernelspec list` and select/fix the project kernel. Preserve global kernels. |
 | PDF text is empty or a formula is missing | Inspect the rendered page; extraction is not OCR and may omit formulas. |
 | You still see old notes | Save/close before rebuilding, then reopen the file; do not overwrite the external update with an old browser copy. |
-| A script fails | Give the agent the full error and exact command. Fix the cause; do not skip the failed check. |
+| A script fails | Share the exact command and relevant error after removing tokens and other secrets. The agent should diagnose and verify an authorized repair. |
 
 Your sources and study output are private by default. Do not publish `materials/`, `study/`, or `output/` merely because the template itself is open source.

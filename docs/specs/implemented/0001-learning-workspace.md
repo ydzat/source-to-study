@@ -12,7 +12,7 @@ The root README guides course setup, AGENTS defines tutor behavior, and bilingua
 
 ## Alternatives considered
 
-Keeping the development scaffold as the main entry was rejected because it addresses contributors rather than learners. Duplicating completed course state in English and Chinese was rejected because the copies can diverge; only form guidance is bilingual.
+The development scaffold addresses contributors, so it was not selected as the learner entry point. Completed course state has one maintained version to prevent translation divergence; form guidance is bilingual.
 
 ## Consequences
 

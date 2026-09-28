@@ -7,6 +7,8 @@ These documents are for template maintainers. Learners start at the [root README
 - [Architecture](architecture.md): current files and ownership.
 - [Conventions](conventions.md): publication boundaries and bilingual maintenance.
 - [Design records](specs/README.md): proposals, decisions, and verification.
+- [Teaching workflow lessons](specs/implemented/0007-source-bounded-teaching.md): why source scope, complete answers, and semantic checks have explicit execution requirements.
+- [Working-rules audit](specs/implemented/0008-working-rules-audit.md): expression, question authorization, safe editing, and Markdown consistency.
 
 For a non-trivial change, first record the problem, proposed behavior, alternatives, acceptance criteria, and risks under `specs/proposed/`. Implement against observable criteria. After verification, move the record to `specs/implemented/` and rewrite it as the current decision with consequences and verification evidence. Do not label partially implemented work as implemented.
 

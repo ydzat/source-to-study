@@ -8,7 +8,7 @@ Manual AI-assisted study can produce broken asset paths, unsupported citations, 
 
 ## Proposal
 
-Build a minimal pipeline around a rights-cleared mini-course: source indexing, editable lesson inputs, validated Notebook output, review-card validation, and optional Anki export. The bundled external source is [OnlineStatBook central tendency](../../../examples/central-tendency/README.md); learners generate their own notes through the [practice tutorial](../../../guides/first-session.md), rather than using a prewritten reference Notebook. Preserve learner responses across rebuilds. Keep reusable logic independent of course, machine paths, model provider, and optional UI.
+Build a minimal pipeline around a rights-cleared mini-course: source indexing, editable lesson inputs, validated Notebook output, review-card validation, and optional Anki export. The bundled external source is [OnlineStatBook central tendency](../../../examples/central-tendency/README.md); learners generate their own notes through the [practice tutorial](../../../guides/first-session.md). Preserve learner responses across rebuilds. Keep reusable logic independent of course, machine paths, model provider, and optional UI.
 
 The [local tool reference](../../../guides/tools.md) owns available commands and formats. The tutorial and Chinese-language Notebook workflow have shipped and passed [live acceptance](../implemented/0006-live-tutorial-acceptance.md). This broader proposal remains open for an independent English-language run and an integrated source-to-card acceptance run; existing export tests do not establish that full workflow. Anki integration is file-only, not direct application control.
 

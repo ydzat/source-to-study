@@ -26,7 +26,7 @@ Make a local `sts-setup` skill the canonical procedure. A Windows PowerShell scr
 
 ## Limitations
 
-Network and host approvals can prevent installation. Existing global kernel configuration can select the wrong interpreter. Runtime logs may contain local authentication tokens and must remain ignored. The full original PDF learning walkthrough remains a separate content deliverable; link the existing tutorial without claiming it already exists.
+Network and host approvals can prevent installation. Existing global kernel configuration can select the wrong interpreter. Runtime logs may contain local authentication tokens and must remain ignored. The PDF learning walkthrough is documented in [the tutorial](../../../guides/first-session.md), with its historical verification in [0006](0006-live-tutorial-acceptance.md); setup verification alone does not establish teaching behavior.
 
 ## Verification
 

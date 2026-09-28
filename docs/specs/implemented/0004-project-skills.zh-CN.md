@@ -8,11 +8,11 @@ Status: implemented
 
 ## 决定
 
-.agents/skills/ 提供三个纯指令 Skill：sts-course-setup、sts-study-session、sts-export-cards。常驻原则保留在 AGENTS.md，格式与命令由 guides/tools.md 负责，脚本仍在 scripts/；Skill 引用这些真源，不复制代码或 schema。英文 SKILL.md 是机器入口，双语[学习指南](../../../guides/skills.zh-CN.md)解释使用方式。
+最初的三个纯指令 Skill 为 sts-course-setup、sts-study-session、sts-export-cards。[0005](0005-agent-setup.zh-CN.md) 增加 sts-setup，当前四个入口见 [AGENTS.md](../../../AGENTS.zh-CN.md)。常驻原则保留在 AGENTS.md，格式与命令由 guides/tools.md 负责，脚本位于 scripts/；Skill 引用这些文件。英文 SKILL.md 是机器入口，双语[学习指南](../../../guides/skills.zh-CN.md)解释使用方式。
 
 ## 考虑过的替代方案
 
-一个万能 Skill 会加载无关流程；每个脚本一个 Skill 会把学习目标拆成实现碎片；不同 Agent 各存一份会产生漂移。三个任务入口分别负责初始化、实际学习和按需导出。
+一个覆盖所有任务的 Skill 会加载无关流程；每个脚本一个 Skill 会让同一学习目标分散到多个入口；不同 Agent 各存一份会增加版本不一致的风险。当时的三个任务入口分别负责初始化、实际学习和按需导出。
 
 ## 验证
 

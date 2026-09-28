@@ -11,6 +11,11 @@ Copy to `study/COURSE.md`; complete in your chosen language. / 复制到该位�
 - Institutional AI-use rules / 学校 AI 使用规则:
 - Source priority / 来源优先级:
 - Agreed starting point / 已确认起点:
+- Included subjects and prerequisite sources / 纳入范围的科目及前置来源:
+- Explicit exclusions or intentional skips / 明确排除或主动跳过的内容:
+- Notes/chat deliverable agreement and any designated benchmark / 笔记与聊天交付约定及指定范例:
+
+Questions alone do not authorize note edits; record explicit teaching or revision requests separately. / 单独提问不授权改笔记；明确的教学或修改请求另行记录。
 
 ## Source map / 来源索引
 

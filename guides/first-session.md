@@ -32,11 +32,11 @@ When the Agent finishes, reopen the same Notebook and read the explanation of K0
 
 Ask about anything unclear in your own words. There is no required wording. For example:
 
-> Why can the same dataset have different “centers”? I don't quite get it.
+> Why can the same dataset have different “centers”? Please explain this in my K01 notes.
 
 You could also ask “What does this symbol mean?”, “How did you calculate this step?”, or “What happens if we change one number?”. **Save and close the Notebook tab before sending a request that changes it.**
 
-The Agent will improve the notes based on your question. When it finishes, reopen the same file and see what changed.
+Questions alone receive answers in conversation. To revise the file, explicitly ask to update the notes, as in the example above. After a requested update, reopen the same file and inspect the relevant section.
 
 ## 4. Run the code
 
@@ -46,7 +46,7 @@ If code is confusing or fails, ask the Agent about it too. Only run code you tru
 
 ## 5. Move on when you are ready
 
-Keep asking about anything unclear; the Agent will keep improving the notes. When you feel you have learned this unit, save and close the Notebook, then say:
+Ask about anything unclear and request note revisions where needed. When ready to continue, save and close the Notebook, then say:
 
 > That makes sense now. Let's move on to K02.
 

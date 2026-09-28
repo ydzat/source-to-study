@@ -25,7 +25,7 @@ Use **PDF pages 2–13**, a 12-page sequence of three complete sections. These a
 
 Prerequisites: ordering numbers, addition, division, absolute values, and squares. Briefly introduce datasets/distributions, the stem-and-leaf display on PDF p.4, and the median/percentile interpretation when needed. Do not assume prior statistics, calculus, or Python programming. Python code can be supplied and explained by the Agent.
 
-Suggested onboarding budget: **45–60 minutes**, a design estimate rather than an observed completion time. For a shorter session, complete K01 and resume later. Do not teach the remaining chapter merely because it is bundled.
+Suggested onboarding budget: **45–60 minutes**. This design estimate has not been measured in a learner session. For a shorter session, complete K01 and resume later. Do not teach the remaining chapter merely because it is bundled.
 
 ## Why this source fits
 

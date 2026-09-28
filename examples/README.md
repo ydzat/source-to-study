@@ -36,7 +36,7 @@ If an object is blue, must it belong to A? Try answering before opening the expl
 <details>
 <summary>Answer</summary>
 
-No. The premise restricts the color of members of A, not membership of every blue object. A blue object outside A is a counterexample.
+No. The premise restricts the color of members of A. A blue object outside A is consistent with that premise and provides a counterexample to the claim in the question.
 
 </details>
 

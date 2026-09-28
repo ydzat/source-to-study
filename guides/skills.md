@@ -11,6 +11,7 @@ Skills package the tasks your Agent repeats. You describe the learning goal; the
 | “Install and verify this project.” | `sts-setup`: uv, isolated environment, workspace, real kernel/server checks, restart handoff |
 | “Prepare this lecture and propose a Notebook framework.” | `sts-course-setup`: course profile, source inspection, unit division, framework checks |
 | “Continue K03” or “Revise this explanation in my notes.” | `sts-study-session`: recover context, teach the requested unit, update and verify notes |
+| “What does this symbol mean?” | Answer the question in conversation; file edits require an explicit change request. |
 | “Quiz me” or “Finish today's study and record the next step.” | `sts-study-session`: actual practice and evidence-based session records |
 | “Make cards from these notes and export them.” | `sts-export-cards`: source-checked card input and a TSV/media bundle |
 
@@ -34,6 +35,6 @@ Substitute the other skill name when teaching or exporting cards. This works onl
 
 ## What stays where
 
-`AGENTS.md` retains the permanent teaching and safety principles. Skills own task procedures. The [tool reference](tools.md) owns commands and formats; `scripts/` performs deterministic operations. Skills reference these files rather than carrying independent copies.
+`AGENTS.md` retains the permanent teaching and safety principles. Skills own task procedures. The [tool reference](tools.md) owns commands and formats; `scripts/` performs deterministic operations. Skills reference these files to keep shared instructions consistent.
 
 The machine entry points are English; they instruct the Agent to use your course's chosen teaching language. This guide and the user tutorials are available in both languages. Skill loading alone never authorizes installations, publication, card generation at every lesson end, or changes to your learning status.

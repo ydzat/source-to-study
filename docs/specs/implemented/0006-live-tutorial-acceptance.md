@@ -8,7 +8,9 @@ Document and script tests do not show whether short, ordinary learner messages a
 
 ## Decision
 
-Keep the tutorial's short learner messages. Make their intended actions explicit in the owning skills: preprocessing includes a source map and validated framework; starting a unit and asking follow-up questions update existing notes by default; chat reports the result instead of repeating the lesson. Explicit requests for extraction only, chat only, quizzes, or a smaller scope still take precedence.
+Preprocessing includes a source map and validated framework. Starting a unit follows the agreed notes workflow. Under the current [working rules](../../../AGENTS.md), questions receive answers in conversation; a request to change notes must explicitly authorize that change. A completed note update is delivered through the file with a short verification report. Explicit extraction-only, chat-only, quiz, and smaller-scope requests govern the task.
+
+The 2026-09-27 observations below tested an earlier question-to-edit default. They remain historical evidence and do not validate the revised authorization rule. The rule change and its verification scope are recorded in [0008](0008-working-rules-audit.md).
 
 Verify this contract with a real independent Agent in an isolated, initialized workspace, not a simulated response. Use the tutorial's messages without injecting a test rubric. Inspect actual artifacts, source support, execution, and revision diffs.
 
@@ -18,9 +20,9 @@ A scripted fake Agent cannot test discovery or behavior. Giving the second insta
 
 ## Consequences
 
-- Learners do not need to repeat the internal workflow or ask explicitly for every Notebook update.
+- Learners can request a unit without restating the internal workflow. Questions alone do not authorize Notebook changes.
 - Missing learning choices and protection of unsaved edits can require a short reply. They are not hidden by the tutorial.
-- Skills are canonical English instructions; learner-facing tutorials remain bilingual. No longer prompts or source-specific rules were added to the tutorial.
+- Skills are canonical English instructions; learner-facing tutorials remain bilingual. Current revision examples explicitly request note updates.
 - Local logs, generated lessons, snapshots, and test fixtures remain ignored; none are a shipped reference answer or real learner progress.
 
 ## Verification
@@ -31,7 +33,7 @@ Tested on Windows on 2026-09-27 with Codex CLI `0.158.0-alpha.2.1` and the exist
 
 - Initial preprocessing stopped after PDF extraction. After the setup-skill correction, the same short request proposed a division, requested learning choices, and built the framework after confirmation.
 - Initial K01 teaching was chat-only and left the Notebook unchanged. The study-skill correction made notes the default deliverable.
-- A follow-up updated the note but repeated its example and table in chat. The delivery rule was tightened; a fresh-session clarification returned a brief answer and file/verification handoff instead of another lesson.
+- A follow-up updated the note but repeated its example and table in chat. The delivery rule was tightened; a fresh-session clarification returned a brief answer and file/verification handoff without repeating the lesson.
 - An existing session did not reload a changed skill. Corrected behaviors were tested in new conversations; the core preprocessing verification → K01 → follow-up → K02 sequence then ran in one persistent conversation. The final concise-delivery change received a separate fresh-session test.
 
 ### Artifact checks

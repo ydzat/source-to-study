@@ -12,7 +12,7 @@ We choose UTF-8 TSV for readable text and standard-library export. CSV is also s
 
 ## Ask for cards
 
-Tell your agent which completed notes and optional source sections to use, your review language, and the desired scope. It should verify sources, create focused questions rather than whole lecture paragraphs, and prepare `study/review/cards.json` using the tool reference. Request an export only after reviewing the proposed content.
+Tell your agent which completed notes and optional source sections to use, your review language, and the desired scope. It should verify sources, create questions focused on individual recall targets, and prepare `study/review/cards.json` using the tool reference. Request an export only after reviewing the proposed content.
 
 ```sh
 uv run python scripts/export_cards.py study/review/cards.json output/anki-review-01
